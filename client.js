@@ -7,7 +7,6 @@ const connect = function() {
   });
 
   conn.on('connect', () => {
-    console.log('Connecting...');
     setTimeout(() => {
       console.log('You playin the game now cuz');
     }, 2000);
