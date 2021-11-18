@@ -1,22 +1,29 @@
 const net = require("net");
 
-const connect = function () {
+const connect = function() {
   const conn = net.createConnection({
     host: 'localhost',
     port: 50541
   });
 
   conn.on('connect', () => {
-    console.log('Connecting...')
-    setTimeout(() => { 
+    console.log('Connecting...');
+    setTimeout(() => {
       console.log('You playin the game now cuz');
-    }, 2000)
+    }, 2000);
     conn.write("Name: LHL");
   });
 
   conn.on('connect', () => {
-    conn.write('Move: up')
-  })
+    // let x = 0;
+    // while (x < 10) {
+    //   setTimeout(() => {
+    //     conn.write('Move: up');
+    //   }, 50 * x);
+    //   x += 1
+    // }
+    //setInterval(() => {conn.write('Move: up')}, 50);
+  });
 
   conn.on('data', (data) => {
     console.log(data);
