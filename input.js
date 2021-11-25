@@ -11,9 +11,8 @@ const setupInput = conn => {
 };
 
 const handleUserInput = key => {
-  switch (key) {
+    switch (key) {
   case '\u0077':
-    //setInterval(() => {connection.write('Move: up')}, 50);
     connection.write("Move: up");
     break;
   case '\u0061':
@@ -33,5 +32,4 @@ const handleUserInput = key => {
   }
 };
 
-//const messenger
 module.exports = {setupInput};

@@ -14,17 +14,6 @@ const connect = function() {
     conn.write("Name: LHL");
   });
 
-  conn.on('connect', () => {
-    // let x = 0;
-    // while (x < 10) {
-    //   setTimeout(() => {
-    //     conn.write('Move: up');
-    //   }, 50 * x);
-    //   x += 1
-    // }
-    //setInterval(() => {conn.write('Move: up')}, 50);
-  });
-
   conn.on('data', (data) => {
     console.log(data);
   });
